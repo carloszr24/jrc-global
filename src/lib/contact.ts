@@ -1,9 +1,9 @@
 export const AGENT = {
-  name: 'Sales Inmobiliaria',
-  title: 'Soluciones inmobiliarias',
+  name: 'JRC Global',
+  title: 'Inmobiliaria · Financiera · Seguros · Consultoría energética',
   city: 'Fernán Núñez',
   province: 'Córdoba',
-  tagline: 'Asesoramiento personalizado para compra, venta y alquiler en Fernán Núñez y la provincia de Córdoba.',
+  tagline: 'Soluciones integrales en Fernán Núñez y la provincia de Córdoba.',
 } as const
 
 export const CONTACT = {

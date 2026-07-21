@@ -1,6 +1,6 @@
-# Sales Inmobiliaria — Web
+# JRC Global — Web
 
-Next.js + TypeScript + Tailwind. Catálogo de propiedades en archivo local (`src/data/properties.ts`).
+Next.js + TypeScript + Tailwind. Inmobiliaria, financiera, seguros y consultoría energética.
 
 ---
 

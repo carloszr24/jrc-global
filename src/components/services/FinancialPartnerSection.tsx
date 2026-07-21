@@ -46,18 +46,18 @@ const financialServices = [
 
 export function FinancialPartnerSection() {
   return (
-    <section className="relative overflow-hidden bg-[#0c1828] py-24 px-6 md:px-10 text-white">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(56,189,248,0.12),_transparent_55%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(224,8,128,0.08),_transparent_50%)]" />
+    <section className="relative overflow-hidden bg-neutral-950 py-24 px-6 md:px-10 text-white">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.06),_transparent_55%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(255,255,255,0.04),_transparent_50%)]" />
 
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-sky-300/90 text-xs tracking-[0.3em] uppercase mb-4">Colaborador financiero</p>
+          <p className="text-neutral-400 text-xs tracking-[0.3em] uppercase mb-4">Colaborador financiero</p>
           <h2 className="font-display text-4xl md:text-5xl font-light text-white mb-4">
             Financiación para tu operación
           </h2>
-          <p className="text-slate-400 text-lg font-light max-w-2xl mx-auto">
-            En Sales trabajamos con un equipo especializado para ayudarte con hipotecas, rehipotecas y reunificación de deudas.
+          <p className="text-neutral-400 text-lg font-light max-w-2xl mx-auto">
+            En JRC Global trabajamos con un equipo especializado para ayudarte con hipotecas, rehipotecas y reunificación de deudas.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export function FinancialPartnerSection() {
             href={EVEREST_WEBSITE}
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-full max-w-md transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0c1828]"
+            className="block w-full max-w-md transition-opacity hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-950"
             aria-label="Visitar la web de Everest Financial"
           >
             <Image
@@ -84,9 +84,9 @@ export function FinancialPartnerSection() {
           {highlights.map((item, index) => (
             <div
               key={item}
-              className="inline-flex items-center gap-3 rounded-full border border-sky-400/25 bg-sky-950/40 px-5 py-2.5 text-sm text-sky-50"
+              className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 text-sm text-neutral-100"
             >
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-sky-500/20 text-xs font-semibold text-sky-200">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-white/10 text-xs font-semibold text-white">
                 {index + 1}
               </span>
               <span>{item}</span>
@@ -98,26 +98,26 @@ export function FinancialPartnerSection() {
           {financialServices.map((service) => (
             <article
               key={service.title}
-              className="group rounded-2xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-sm transition-colors hover:border-sky-400/30 hover:bg-white/[0.07]"
+              className="group rounded-2xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-sm transition-colors hover:border-white/30 hover:bg-white/[0.07]"
             >
-              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full border border-sky-400/20 bg-sky-500/10 text-sky-200 transition-colors group-hover:border-sky-300/40 group-hover:text-white">
+              <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/20 bg-white/5 text-neutral-200 transition-colors group-hover:border-white/40 group-hover:text-white">
                 {service.icon}
               </div>
               <h3 className="font-display text-2xl font-light text-white mb-3">{service.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{service.desc}</p>
+              <p className="text-neutral-400 text-sm leading-relaxed">{service.desc}</p>
             </article>
           ))}
         </div>
 
         <div className="text-center">
-          <p className="text-slate-400 mb-6 max-w-lg mx-auto text-sm md:text-base">
+          <p className="text-neutral-400 mb-6 max-w-lg mx-auto text-sm md:text-base">
             Cuéntanos tu caso y te ponemos en contacto con nuestro colaborador para un estudio sin compromiso.
           </p>
           <a
             href={EVEREST_WEBSITE}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-sky-500 px-10 py-4 text-sm font-medium tracking-wide text-white transition-colors hover:bg-sky-400"
+            className="inline-flex items-center justify-center rounded-full bg-white px-10 py-4 text-sm font-medium tracking-wide text-black transition-colors hover:bg-neutral-200"
           >
             Solicitar estudio gratuito
           </a>

@@ -102,12 +102,12 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
             <Image
-              src="/images/inmobiliaria-sales.png"
+              src="/images/jrc-global.png"
               alt={`${AGENT.name} logo`}
               width={260}
               height={70}
               priority
-              className="h-8 w-auto md:h-9"
+              className="h-9 w-auto md:h-10"
             />
           </Link>
 

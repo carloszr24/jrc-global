@@ -3,7 +3,7 @@ import path from 'path'
 import type { Property } from '@/types'
 
 const CATALOG_FILE = path.join(process.cwd(), 'data', 'catalog.json')
-const BLOB_KEY = 'inmobiliaria-sales-catalog.json'
+const BLOB_KEY = 'jrc-global-catalog.json'
 
 type StoredProperty = Omit<Property, 'createdAt' | 'updatedAt'> & {
   createdAt: string

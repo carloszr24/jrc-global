@@ -53,7 +53,7 @@ export default async function HomePage() {
             Compra o vende tu vivienda en Fernán Núñez
             <span className="hidden md:inline"> </span>
             <br className="md:hidden" aria-hidden="true" />
-            en <span className="text-brand-cyan-light [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">menos de 60 días</span>
+            en <span className="text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">menos de 60 días</span>
           </h1>
           <p className="text-stone-200 text-base sm:text-lg md:text-xl font-normal max-w-[min(100%,22rem)] sm:max-w-2xl mx-auto mb-6 md:mb-7 leading-relaxed text-pretty animate-fade-up" style={{ animationDelay: '0.1s', opacity: 0, animationFillMode: 'forwards' }}>
             Te acompañamos desde el inicio hasta el final de la operación con un servicio totalmente personalizado
@@ -70,7 +70,7 @@ export default async function HomePage() {
             </Link>
             <ValoracionGratuitaModal
               triggerLabel="Quiero vender"
-              triggerClassName="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-medium border-2 border-brand-cyan-light text-white box-border hover:bg-brand-cyan-light hover:text-stone-900 transition-colors duration-200"
+              triggerClassName="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-medium border-2 border-white text-white box-border hover:bg-white hover:text-black transition-colors duration-200"
             />
           </div>
         </div>
@@ -146,9 +146,9 @@ export default async function HomePage() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="bg-gradient-to-r from-brand-cyan-dark via-brand-cyan-mid to-brand-cyan py-24 px-6 md:px-10 text-center">
-        <div className="max-w-2xl mx-auto rounded-2xl border border-white/25 bg-black/10 px-6 py-10 md:px-10 md:py-12">
-          <p className="mb-4 text-xs uppercase tracking-[0.13em] text-brand-cyan-light">
+      <section className="bg-black py-24 px-6 md:px-10 text-center">
+        <div className="max-w-2xl mx-auto rounded-2xl border border-white/20 bg-white/5 px-6 py-10 md:px-10 md:py-12">
+          <p className="mb-4 text-xs uppercase tracking-[0.13em] text-neutral-400">
             5/5 en Google
           </p>
           <h2 className="mb-6 font-display text-4xl font-semibold leading-tight text-white md:text-5xl">
@@ -160,13 +160,13 @@ export default async function HomePage() {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/contacto"
-              className="inline-flex min-h-[3rem] items-center justify-center rounded-md border border-transparent bg-white px-10 py-3 text-sm font-medium tracking-wide text-brand-cyan-dark hover:bg-brand-cyan-light transition-colors duration-200"
+              className="inline-flex min-h-[3rem] items-center justify-center rounded-md border border-transparent bg-white px-10 py-3 text-sm font-medium tracking-wide text-black hover:bg-neutral-200 transition-colors duration-200"
             >
               Hablar con nosotros
             </Link>
             <Link
               href="/propiedades"
-              className="inline-flex min-h-[3rem] items-center justify-center rounded-md border border-white px-10 py-3 text-sm font-medium tracking-wide text-white hover:bg-white hover:text-brand-cyan-dark transition-colors duration-200"
+              className="inline-flex min-h-[3rem] items-center justify-center rounded-md border border-white px-10 py-3 text-sm font-medium tracking-wide text-white hover:bg-white hover:text-black transition-colors duration-200"
             >
               Ver propiedades
             </Link>
