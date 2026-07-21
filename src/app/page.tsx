@@ -3,6 +3,7 @@ import { getFeaturedPropertiesForHome } from '@/lib/properties-store'
 import { ReviewsCarousel } from '@/components/home/ReviewsCarousel'
 import { FeaturedPropertiesGrid } from '@/components/home/FeaturedPropertiesGrid'
 import { HeroCarousel } from '@/components/home/HeroCarousel'
+import { ValoracionGratuitaModal } from '@/components/home/ValoracionGratuitaModal'
 
 export const dynamic = 'force-dynamic'
 
@@ -91,14 +92,12 @@ export default async function HomePage() {
               href="/propiedades"
               className="btn-gold w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide text-center border-2 border-transparent box-border"
             >
-              Ver propiedades
+              Quiero comprar
             </Link>
-            <Link
-              href="/sobre-nosotros"
-              className="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-medium border-2 border-white text-white box-border hover:bg-white hover:text-black transition-colors duration-200"
-            >
-              Nuestros servicios
-            </Link>
+            <ValoracionGratuitaModal
+              triggerLabel="Quiero vender"
+              triggerClassName="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-medium border-2 border-white text-white box-border hover:bg-white hover:text-black transition-colors duration-200"
+            />
           </div>
         </div>
       </section>

@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { AGENT } from '@/lib/contact'
 import { cn } from '@/lib/utils'
+import { ValoracionGratuitaModal } from '@/components/home/ValoracionGratuitaModal'
 
 const links = [
   { href: '/propiedades', label: 'Propiedades' },
@@ -166,17 +167,15 @@ export function Navbar() {
               ))}
             </nav>
 
-            <Link
-              href="/contacto"
-              className={cn(
+            <ValoracionGratuitaModal
+              triggerLabel="Valoración gratuita"
+              triggerClassName={cn(
                 'inline-flex h-10 items-center justify-center rounded-md px-5 text-[11px] uppercase tracking-[0.13em] leading-none',
                 transparent
                   ? 'border border-white/80 text-white hover:bg-white hover:text-stone-900 transition-colors duration-200'
                   : 'btn-primary py-0'
               )}
-            >
-              Contacto
-            </Link>
+            />
           </div>
 
           {/* Mobile toggle */}
@@ -239,13 +238,10 @@ export function Navbar() {
               </Link>
             ))}
           </div>
-          <Link
-            href="/contacto"
-            onClick={() => setOpen(false)}
-            className="btn-primary text-xs mt-4 w-full text-center"
-          >
-            Contacto
-          </Link>
+          <ValoracionGratuitaModal
+            triggerLabel="Valoración gratuita"
+            triggerClassName="btn-primary text-xs mt-4 w-full text-center"
+          />
         </div>
       )}
     </header>
