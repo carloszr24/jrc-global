@@ -13,16 +13,11 @@ const links = [
   { href: '/contacto', label: 'Contacto' },
 ]
 
-const serviceColumns = [
-  {
-    title: 'Nuestros servicios',
-    items: [
-      { href: '/sobre-nosotros', title: 'Inmobiliaria', description: 'Compra, venta y alquiler en Puente Genil y Córdoba.' },
-      { href: '/sobre-nosotros', title: 'Financiera', description: 'Hipotecas, rehipotecas y reunificación de deudas.' },
-      { href: '/sobre-nosotros', title: 'Seguros', description: 'Protección para tu hogar y tu patrimonio.' },
-      { href: '/sobre-nosotros', title: 'Consultoría energética', description: 'Eficiencia y valor energético de tu inmueble.' },
-    ],
-  },
+const navServices = [
+  { href: '/sobre-nosotros', title: 'Inmobiliaria', description: 'Compra, venta y alquiler en Puente Genil y Córdoba.' },
+  { href: '/sobre-nosotros', title: 'Financiera', description: 'Hipotecas y financiación a medida.' },
+  { href: '/sobre-nosotros', title: 'Seguros', description: 'Protección para hogar y patrimonio.' },
+  { href: '/sobre-nosotros', title: 'Consultoría energética', description: 'Eficiencia energética para tu inmueble.' },
 ]
 
 export function Navbar() {
@@ -138,19 +133,22 @@ export function Navbar() {
                     </Link>
                     <div
                       className={cn(
-                        'absolute left-1/2 top-full z-50 mt-4 w-[28rem] -translate-x-1/2 rounded-2xl border border-stone-200 bg-white p-6 shadow-2xl transition-all duration-200',
+                        'absolute right-0 top-full z-50 mt-4 w-[32rem] rounded-2xl border border-stone-200 bg-white p-5 shadow-2xl transition-all duration-200',
                         servicesOpen ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none translate-y-2 opacity-0'
                       )}
                     >
-                      <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-3">
-                        {serviceColumns[0].items.map((item) => (
+                      <p className="mb-3 px-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-400">
+                        Nuestros servicios
+                      </p>
+                      <div className="grid grid-cols-2 gap-2">
+                        {navServices.map((item) => (
                           <Link
                             key={item.title}
                             href={item.href}
-                            className="block rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-stone-50"
+                            className="rounded-xl border border-stone-100 bg-stone-50/60 px-4 py-3.5 transition-colors duration-150 hover:border-stone-200 hover:bg-white"
                           >
-                            <p className="text-sm font-medium text-stone-900">{item.title}</p>
-                            <p className="mt-0.5 text-xs leading-relaxed text-stone-500">{item.description}</p>
+                            <p className="text-sm font-semibold text-stone-900">{item.title}</p>
+                            <p className="mt-1 text-xs leading-relaxed text-stone-500">{item.description}</p>
                           </Link>
                         ))}
                       </div>
@@ -227,6 +225,20 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
+          <div className="border-t border-stone-100 pt-4 space-y-2">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-stone-400">Servicios</p>
+            {navServices.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="block py-1"
+              >
+                <p className="text-sm font-medium text-stone-900">{item.title}</p>
+                <p className="text-xs text-stone-500">{item.description}</p>
+              </Link>
+            ))}
+          </div>
           <Link
             href="/contacto"
             onClick={() => setOpen(false)}
