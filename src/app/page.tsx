@@ -3,7 +3,6 @@ import { getFeaturedPropertiesForHome } from '@/lib/properties-store'
 import { ReviewsCarousel } from '@/components/home/ReviewsCarousel'
 import { FeaturedPropertiesGrid } from '@/components/home/FeaturedPropertiesGrid'
 import { HeroCarousel } from '@/components/home/HeroCarousel'
-import { ValoracionGratuitaModal } from '@/components/home/ValoracionGratuitaModal'
 
 export const dynamic = 'force-dynamic'
 
@@ -42,7 +41,7 @@ export default async function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative h-svh min-h-[32rem] flex items-center justify-center overflow-hidden pt-[4.5rem] pb-8 md:pt-20 md:pb-10">
+      <section className="relative h-svh min-h-[32rem] flex items-center justify-center overflow-hidden pt-20 pb-8 md:pt-24 md:pb-10">
         <div className="absolute inset-0">
           <HeroCarousel />
         </div>
@@ -68,10 +67,12 @@ export default async function HomePage() {
             >
               Quiero comprar
             </Link>
-            <ValoracionGratuitaModal
-              triggerLabel="Quiero vender"
-              triggerClassName="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-medium border-2 border-white text-white box-border hover:bg-white hover:text-black transition-colors duration-200"
-            />
+            <Link
+              href="/contacto"
+              className="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-medium border-2 border-white text-white box-border hover:bg-white hover:text-black transition-colors duration-200"
+            >
+              Quiero vender
+            </Link>
           </div>
         </div>
       </section>

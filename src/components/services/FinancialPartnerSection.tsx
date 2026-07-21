@@ -57,7 +57,7 @@ export function FinancialPartnerSection() {
             Financiación para tu operación
           </h2>
           <p className="text-neutral-400 text-lg font-light max-w-2xl mx-auto">
-            En JRC Global trabajamos con un equipo especializado para ayudarte con hipotecas, rehipotecas y reunificación de deudas.
+            Trabajamos con un equipo especializado para ayudarte con hipotecas, rehipotecas y reunificación de deudas.
           </p>
         </div>
 

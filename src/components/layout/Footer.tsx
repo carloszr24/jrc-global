@@ -21,9 +21,9 @@ export function Footer() {
             <Image
               src="/images/jrc-global.png"
               alt={`${AGENT.name} logo`}
-              width={220}
-              height={60}
-              className="h-10 w-auto"
+              width={280}
+              height={76}
+              className="h-12 w-auto md:h-14"
             />
             <p className="mt-4 text-sm leading-relaxed text-stone-600 max-w-sm">
               {AGENT.title} en {AGENT.city}. {AGENT.tagline}
