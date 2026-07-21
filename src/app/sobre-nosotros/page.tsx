@@ -106,11 +106,16 @@ export default function SobreNosotrosPage() {
           <p className="mt-10 text-[11px] font-medium uppercase tracking-[0.35em] text-neutral-500 md:mt-12">
             Servicios
           </p>
-          <h1 className="mt-5 font-display text-5xl font-semibold tracking-tight text-black md:text-6xl lg:text-7xl">
-            Inmobiliaria
-          </h1>
-          <p className="mt-6 text-[11px] font-medium uppercase tracking-[0.28em] text-neutral-500 md:text-xs">
-            Agencia inmobiliaria en Puente Genil
+          <div className="mt-6 space-y-2 md:mt-8 md:space-y-3">
+            <h1 className="font-display text-2xl font-semibold uppercase tracking-[0.12em] text-black sm:text-3xl md:text-4xl md:tracking-[0.16em]">
+              Inmobiliaria-Financiera
+            </h1>
+            <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-black sm:text-3xl md:text-4xl md:tracking-[0.12em]">
+              Seguros-Consultoría energética
+            </p>
+          </div>
+          <p className="mt-8 text-[11px] font-medium uppercase tracking-[0.28em] text-neutral-500 md:text-xs">
+            En Puente Genil · Córdoba
           </p>
         </div>
 

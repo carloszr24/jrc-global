@@ -16,24 +16,54 @@ function HomeIcon() {
   )
 }
 
-function FileIcon() {
+function FinanceIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6" aria-hidden="true">
-      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
-      <path d="M14 3v5h5" />
-      <path d="M9 13h6M9 17h6" />
+      <rect x="3" y="6" width="18" height="12" rx="2" />
+      <path d="M3 10h18" />
+      <path d="M7 15h2" />
     </svg>
   )
 }
 
-function HandshakeIcon() {
+function ShieldIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6" aria-hidden="true">
-      <path d="M9.5 10.5 12 13l2.5-2.5a2 2 0 0 1 2.8 0l3.2 3.2a2 2 0 0 1 0 2.8l-1.4 1.4a2 2 0 0 1-2.8 0L12 13.7" />
-      <path d="M14.5 10.5 12 8 9.5 10.5a2 2 0 0 1-2.8 0L3.5 7.3a2 2 0 0 1 0-2.8l1.4-1.4a2 2 0 0 1 2.8 0L12 7.3" />
+      <path d="M12 3 5 6v5c0 4.5 2.8 7.8 7 9 4.2-1.2 7-4.5 7-9V6l-7-3Z" />
     </svg>
   )
 }
+
+function EnergyIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="h-6 w-6" aria-hidden="true">
+      <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" />
+    </svg>
+  )
+}
+
+const homeServices = [
+  {
+    icon: HomeIcon,
+    title: 'Inmobiliaria',
+    desc: 'Compra, venta y alquiler con acompañamiento completo en Puente Genil y Córdoba.',
+  },
+  {
+    icon: FinanceIcon,
+    title: 'Financiera',
+    desc: 'Hipotecas, rehipotecas y reunificación de deudas con estudio personalizado.',
+  },
+  {
+    icon: ShieldIcon,
+    title: 'Seguros',
+    desc: 'Protección para tu hogar y tu patrimonio en cada operación.',
+  },
+  {
+    icon: EnergyIcon,
+    title: 'Consultoría energética',
+    desc: 'Eficiencia y asesoramiento energético para valorizar tu inmueble.',
+  },
+]
 
 export default async function HomePage() {
   const featured = await getFeaturedPropertiesForHome()
@@ -46,16 +76,12 @@ export default async function HomePage() {
           <HeroCarousel />
         </div>
 
-        {/* Content */}
         <div className="relative z-10 -mt-4 md:-mt-6 text-center px-4 min-[400px]:px-6 max-w-5xl mx-auto">
           <h1 className="font-display text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.45)] text-balance max-md:tracking-[-0.02em] text-[calc(clamp(2rem,6.5vw+0.25rem,3.2rem)+2pt)] md:text-[calc(clamp(2.5rem,4.8vw+0.9rem,5.2rem)+2pt)] leading-[1.12] md:leading-[1.06] mb-4 md:mb-5 animate-fade-up">
-            Compra o vende tu vivienda en Puente Genil
-            <span className="hidden md:inline"> </span>
-            <br className="md:hidden" aria-hidden="true" />
-            en <span className="text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">menos de 60 días</span>
+            Tu operación, de principio a fin
           </h1>
-          <p className="text-stone-200 text-base sm:text-lg md:text-xl font-normal max-w-[min(100%,22rem)] sm:max-w-2xl mx-auto mb-6 md:mb-7 leading-relaxed text-pretty animate-fade-up" style={{ animationDelay: '0.1s', opacity: 0, animationFillMode: 'forwards' }}>
-            Te acompañamos desde el inicio hasta el final de la operación con un servicio totalmente personalizado
+          <p className="text-stone-200 text-base sm:text-lg md:text-xl font-normal max-w-[min(100%,24rem)] sm:max-w-2xl mx-auto mb-6 md:mb-7 leading-relaxed text-pretty animate-fade-up" style={{ animationDelay: '0.1s', opacity: 0, animationFillMode: 'forwards' }}>
+            Inmobiliaria, financiera, seguros y consultoría energética en Puente Genil
           </p>
           <div
             className="flex w-full max-w-xl mx-auto flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up"
@@ -65,13 +91,13 @@ export default async function HomePage() {
               href="/propiedades"
               className="btn-gold w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide text-center border-2 border-transparent box-border"
             >
-              Quiero comprar
+              Ver propiedades
             </Link>
             <Link
-              href="/contacto"
+              href="/sobre-nosotros"
               className="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-medium border-2 border-white text-white box-border hover:bg-white hover:text-black transition-colors duration-200"
             >
-              Quiero vender
+              Nuestros servicios
             </Link>
           </div>
         </div>
@@ -107,34 +133,18 @@ export default async function HomePage() {
         )}
       </section>
 
-      {/* SERVICES STRIP */}
+      {/* SERVICES STRIP — 4 líneas de negocio */}
       <section className="bg-stone-900 py-24 px-6 md:px-10">
         <div className="max-w-7xl mx-auto">
           <div className="mb-10 text-center">
-            <p className="text-xs uppercase tracking-[0.13em] text-stone-400">Servicio completo</p>
+            <p className="text-xs uppercase tracking-[0.13em] text-stone-400">Servicio integral</p>
             <h2 className="mt-3 font-display text-3xl text-white md:text-4xl">
-              Todo lo que necesitas para vender con confianza
+              Cuatro áreas, un solo acompañamiento
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: HomeIcon,
-                title: 'Compra y venta',
-                desc: 'Acompañamiento completo durante toda la operación, de principio a fin.',
-              },
-              {
-                icon: FileIcon,
-                title: 'Valoración profesional',
-                desc: 'Conoce el precio real de mercado de tu inmueble en Puente Genil y la provincia de Córdoba.',
-              },
-              {
-                icon: HandshakeIcon,
-                title: 'Asesoramiento integral',
-                desc: 'Negociación, documentación y acompañamiento para una decisión segura.',
-              },
-            ].map((item) => (
-              <div key={item.title} className="rounded-xl p-8 border border-stone-700 bg-stone-950/40 hover:border-brand-cyan transition-colors duration-300">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {homeServices.map((item) => (
+              <div key={item.title} className="rounded-xl p-8 border border-stone-700 bg-stone-950/40 hover:border-white/40 transition-colors duration-300">
                 <span className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg border border-stone-700 text-stone-100">
                   <item.icon />
                 </span>
@@ -143,6 +153,11 @@ export default async function HomePage() {
               </div>
             ))}
           </div>
+          <div className="mt-10 text-center">
+            <Link href="/sobre-nosotros" className="inline-flex text-sm text-stone-300 underline-offset-4 hover:text-white hover:underline">
+              Ver todos los servicios →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -150,13 +165,13 @@ export default async function HomePage() {
       <section className="bg-black py-24 px-6 md:px-10 text-center">
         <div className="max-w-2xl mx-auto rounded-2xl border border-white/20 bg-white/5 px-6 py-10 md:px-10 md:py-12">
           <p className="mb-4 text-xs uppercase tracking-[0.13em] text-neutral-400">
-            5/5 en Google
+            Puente Genil · Córdoba
           </p>
           <h2 className="mb-6 font-display text-4xl font-semibold leading-tight text-white md:text-5xl">
-            ¿Listo para encontrar<br />tu próximo hogar?
+            ¿Hablamos de tu próximo paso?
           </h2>
           <p className="mb-10 text-lg font-light leading-relaxed text-white/90">
-            Cuéntanos qué necesitas y prepararemos la mejor estrategia para ti.
+            Cuéntanos qué necesitas y te proponemos la mejor estrategia.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link

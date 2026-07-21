@@ -15,19 +15,12 @@ const links = [
 
 const serviceColumns = [
   {
-    title: 'Para propietarios',
+    title: 'Nuestros servicios',
     items: [
-      { href: '/contacto', title: 'Valoración gratuita', description: 'Análisis real de mercado y estrategia de venta.' },
-      { href: '/contacto', title: 'Plan de venta premium', description: 'Fotos, vídeo, difusión y filtro de compradores.' },
-      { href: '/contacto', title: 'Acompañamiento legal', description: 'Gestión documental y soporte hasta notaría.' },
-    ],
-  },
-  {
-    title: 'Para compradores',
-    items: [
-      { href: '/propiedades', title: 'Búsqueda personalizada', description: 'Seleccionamos viviendas según tus criterios.' },
-      { href: '/propiedades', title: 'Visitas eficaces', description: 'Agenda optimizada para que compares mejor.' },
-      { href: '/contacto', title: 'Negociación y cierre', description: 'Te representamos para conseguir el mejor acuerdo.' },
+      { href: '/sobre-nosotros', title: 'Inmobiliaria', description: 'Compra, venta y alquiler en Puente Genil y Córdoba.' },
+      { href: '/sobre-nosotros', title: 'Financiera', description: 'Hipotecas, rehipotecas y reunificación de deudas.' },
+      { href: '/sobre-nosotros', title: 'Seguros', description: 'Protección para tu hogar y tu patrimonio.' },
+      { href: '/sobre-nosotros', title: 'Consultoría energética', description: 'Eficiencia y valor energético de tu inmueble.' },
     ],
   },
 ]
@@ -145,27 +138,20 @@ export function Navbar() {
                     </Link>
                     <div
                       className={cn(
-                        'absolute left-1/2 top-full z-50 mt-4 w-[42rem] -translate-x-1/2 rounded-2xl border border-stone-200 bg-white p-6 shadow-2xl transition-all duration-200',
+                        'absolute left-1/2 top-full z-50 mt-4 w-[28rem] -translate-x-1/2 rounded-2xl border border-stone-200 bg-white p-6 shadow-2xl transition-all duration-200',
                         servicesOpen ? 'pointer-events-auto translate-y-0 opacity-100' : 'pointer-events-none translate-y-2 opacity-0'
                       )}
                     >
-                      <div className="grid grid-cols-2 gap-5">
-                        {serviceColumns.map((column) => (
-                          <div key={column.title} className="rounded-xl border border-stone-200/80 bg-stone-50/50 p-4">
-                            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-stone-900">{column.title}</p>
-                            <div className="space-y-1.5">
-                              {column.items.map((item) => (
-                                <Link
-                                  key={item.title}
-                                  href={item.href}
-                                  className="block rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-white"
-                                >
-                                  <p className="text-sm font-medium text-stone-900">{item.title}</p>
-                                  <p className="mt-0.5 text-xs leading-relaxed text-stone-500">{item.description}</p>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
+                      <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 sm:gap-3">
+                        {serviceColumns[0].items.map((item) => (
+                          <Link
+                            key={item.title}
+                            href={item.href}
+                            className="block rounded-lg px-3 py-2.5 transition-colors duration-150 hover:bg-stone-50"
+                          >
+                            <p className="text-sm font-medium text-stone-900">{item.title}</p>
+                            <p className="mt-0.5 text-xs leading-relaxed text-stone-500">{item.description}</p>
+                          </Link>
                         ))}
                       </div>
                     </div>
