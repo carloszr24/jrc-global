@@ -50,7 +50,7 @@ export default async function HomePage() {
         {/* Content */}
         <div className="relative z-10 -mt-4 md:-mt-6 text-center px-4 min-[400px]:px-6 max-w-5xl mx-auto">
           <h1 className="font-display text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.45)] text-balance max-md:tracking-[-0.02em] text-[calc(clamp(2rem,6.5vw+0.25rem,3.2rem)+2pt)] md:text-[calc(clamp(2.5rem,4.8vw+0.9rem,5.2rem)+2pt)] leading-[1.12] md:leading-[1.06] mb-4 md:mb-5 animate-fade-up">
-            Compra o vende tu vivienda en Fernán Núñez
+            Compra o vende tu vivienda en Puente Genil
             <span className="hidden md:inline"> </span>
             <br className="md:hidden" aria-hidden="true" />
             en <span className="text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">menos de 60 días</span>
@@ -125,7 +125,7 @@ export default async function HomePage() {
               {
                 icon: FileIcon,
                 title: 'Valoración profesional',
-                desc: 'Conoce el precio real de mercado de tu inmueble en Fernán Núñez y la provincia de Córdoba.',
+                desc: 'Conoce el precio real de mercado de tu inmueble en Puente Genil y la provincia de Córdoba.',
               },
               {
                 icon: HandshakeIcon,

@@ -83,7 +83,7 @@ const services = [
   {
     icon: BuildingIcon,
     title: 'Compra y venta residencial',
-    desc: 'Pisos, casas y locales en Fernán Núñez y la provincia de Córdoba con gestión integral de principio a fin.',
+    desc: 'Pisos, casas y locales en Puente Genil y la provincia de Córdoba con gestión integral de principio a fin.',
   },
   {
     icon: GlobeIcon,
@@ -100,7 +100,7 @@ export default function SobreNosotrosPage() {
           <p className="text-brand-cyan text-xs tracking-[0.3em] uppercase mb-4">Quiénes somos</p>
           <h1 className="font-display text-5xl md:text-6xl font-light">Sobre nosotros</h1>
           <p className="text-stone-400 mt-4 text-lg font-light max-w-md">
-            Agencia inmobiliaria especializada en Fernán Núñez y la provincia de Córdoba.
+            Agencia inmobiliaria especializada en Puente Genil y la provincia de Córdoba.
           </p>
         </div>
       </section>

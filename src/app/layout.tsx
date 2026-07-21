@@ -23,9 +23,9 @@ const logo = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'JRC Global | Inmobiliaria, financiera, seguros y energía en Fernán Núñez',
-  description: 'JRC Global: inmobiliaria, financiera, seguros y consultoría energética en Fernán Núñez y la provincia de Córdoba.',
-  keywords: 'jrc global, inmobiliaria fernan nunez, financiera, seguros, consultoria energetica, cordoba',
+  title: 'JRC Global | Inmobiliaria, financiera, seguros y energía en Puente Genil',
+  description: 'JRC Global: inmobiliaria, financiera, seguros y consultoría energética en Puente Genil y la provincia de Córdoba.',
+  keywords: 'jrc global, inmobiliaria puente genil, financiera, seguros, consultoria energetica, cordoba',
 }
 
 export default function RootLayout({

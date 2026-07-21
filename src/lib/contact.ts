@@ -1,32 +1,32 @@
 export const AGENT = {
   name: 'JRC Global',
   title: 'Inmobiliaria · Financiera · Seguros · Consultoría energética',
-  city: 'Fernán Núñez',
+  city: 'Puente Genil',
   province: 'Córdoba',
-  tagline: 'Soluciones integrales en Fernán Núñez y la provincia de Córdoba.',
+  tagline: 'Soluciones integrales en Puente Genil y la provincia de Córdoba.',
 } as const
 
 export const CONTACT = {
   address: {
-    line1: 'C. Adolfo Darhan',
-    line2: '14520 Fernán Núñez, Córdoba',
-    full: 'C. Adolfo Darhan, 14520 Fernán Núñez, Córdoba',
-    mapsQuery: 'C.+Adolfo+Darhan,+14520+Fernan+Nunez,+Cordoba',
+    line1: 'Av. Andalucía, 4',
+    line2: '14500 Puente Genil, Córdoba',
+    full: 'Av. Andalucía, 4, 14500 Puente Genil, Córdoba',
+    mapsQuery: 'Av.+Andalucia,+4,+14500+Puente+Genil,+Cordoba',
   },
   phone: {
-    display: '619 59 03 53',
-    e164: '+34619590353',
-    wa: '34619590353',
+    display: '687 89 24 00',
+    e164: '+34687892400',
+    wa: '34687892400',
   },
-  email: '',
+  email: 'info@jrcglobal.es',
 } as const
 
 export const OPENING_HOURS = [
-  { day: 'Lunes', hours: '10:00–14:00 · 18:00–21:00' },
-  { day: 'Martes', hours: '10:00–14:00 · 18:00–21:00' },
-  { day: 'Miércoles', hours: '10:00–14:00 · 18:00–21:00' },
-  { day: 'Jueves', hours: '10:00–14:00 · 18:00–21:00' },
-  { day: 'Viernes', hours: '10:00–14:00 · 18:00–21:00' },
+  { day: 'Lunes', hours: '9:30–14:00 · 17:00–20:00' },
+  { day: 'Martes', hours: '9:30–14:00 · 17:00–20:00' },
+  { day: 'Miércoles', hours: '9:30–14:00 · 17:00–20:00' },
+  { day: 'Jueves', hours: '9:30–14:00 · 17:00–20:00' },
+  { day: 'Viernes', hours: '9:30–14:00 · 17:00–20:00' },
   { day: 'Sábado', hours: 'Cerrado' },
   { day: 'Domingo', hours: 'Cerrado' },
 ] as const
@@ -38,4 +38,4 @@ export const hasEmail = CONTACT.email.trim().length > 0
 export const emailHref = hasEmail ? `mailto:${CONTACT.email}` : ''
 export const whatsappDisplay = `+34 ${CONTACT.phone.display}`
 
-export const scheduleSummary = 'Lun–Vie: 10:00–14:00 · 18:00–21:00 · Sáb y Dom: Cerrado'
+export const scheduleSummary = 'Lun–Vie: 9:30–14:00 · 17:00–20:00 · Sáb y Dom: Cerrado'
