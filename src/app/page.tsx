@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { getFeaturedPropertiesForHome } from '@/lib/properties-store'
-import { ReviewsCarousel } from '@/components/home/ReviewsCarousel'
 import { FeaturedPropertiesGrid } from '@/components/home/FeaturedPropertiesGrid'
 import { HeroCarousel } from '@/components/home/HeroCarousel'
 import { ValoracionGratuitaModal } from '@/components/home/ValoracionGratuitaModal'
@@ -101,8 +100,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-
-      <ReviewsCarousel />
 
       {/* FEATURED PROPERTIES */}
       <section className="py-24 px-6 md:px-10 max-w-7xl mx-auto">
