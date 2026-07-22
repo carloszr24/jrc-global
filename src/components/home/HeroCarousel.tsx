@@ -6,8 +6,8 @@ export function HeroCarousel() {
   return (
     <div className="absolute inset-0 z-0 overflow-hidden bg-stone-950" aria-hidden="true">
       <Image
-        src="/images/puente-genil.jpg"
-        alt="Vista de Puente Genil, Córdoba"
+        src="/images/llaves.jpg"
+        alt="Llaves de una nueva vivienda"
         fill
         priority
         className="object-cover object-center"
