@@ -89,13 +89,13 @@ export default async function HomePage() {
           >
             <Link
               href="/propiedades"
-              className="btn-gold w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide text-center border-2 border-transparent box-border"
+              className="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-xs md:text-sm font-medium uppercase tracking-[0.14em] text-center bg-white text-black border-2 border-white shadow-[0_8px_30px_rgba(0,0,0,0.35)] box-border hover:bg-neutral-100 hover:border-neutral-100 transition-colors duration-200"
             >
               Quiero comprar
             </Link>
             <ValoracionGratuitaModal
               triggerLabel="Quiero vender"
-              triggerClassName="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-sm md:text-base tracking-wide font-medium border-2 border-white text-white box-border hover:bg-white hover:text-black transition-colors duration-200"
+              triggerClassName="inline-flex w-full sm:flex-1 sm:min-w-0 min-h-[3rem] md:min-h-[3.25rem] items-center justify-center px-8 py-3.5 md:py-4 text-xs md:text-sm font-medium uppercase tracking-[0.14em] border-2 border-white text-white bg-white/10 backdrop-blur-sm box-border shadow-[0_8px_30px_rgba(0,0,0,0.25)] hover:bg-white hover:text-black transition-colors duration-200"
             />
           </div>
         </div>
