@@ -9,7 +9,6 @@ import {
   phoneHref,
   whatsappDisplay,
 } from '@/lib/contact'
-import { FinancialPartnerSection } from '@/components/services/FinancialPartnerSection'
 
 function HomeIcon() {
   return (
@@ -56,7 +55,7 @@ const services = [
   {
     icon: FinanceIcon,
     title: 'Financiera',
-    desc: 'Hipotecas, rehipotecas y reunificación de deudas con estudio personalizado junto a nuestro colaborador financiero.',
+    desc: 'Hipotecas, rehipotecas y reunificación de deudas con estudio personalizado.',
   },
   {
     icon: ShieldIcon,
@@ -106,12 +105,12 @@ export default function SobreNosotrosPage() {
           <p className="mt-10 text-[11px] font-medium uppercase tracking-[0.35em] text-neutral-500 md:mt-12">
             Servicios
           </p>
-          <div className="mt-6 space-y-2 md:mt-8 md:space-y-3">
-            <h1 className="font-display text-2xl font-semibold uppercase tracking-[0.12em] text-black sm:text-3xl md:text-4xl md:tracking-[0.16em]">
-              Inmobiliaria-Financiera
+          <div className="mt-6 w-full max-w-4xl md:mt-8">
+            <h1 className="font-display text-xl font-semibold uppercase tracking-[0.1em] text-black sm:text-2xl md:text-3xl md:tracking-[0.14em]">
+              Inmobiliaria – Financiera
             </h1>
-            <p className="font-display text-2xl font-semibold uppercase tracking-[0.08em] text-black sm:text-3xl md:text-4xl md:tracking-[0.12em]">
-              Seguros-Consultoría energética
+            <p className="mt-2 font-display text-base font-semibold uppercase tracking-[0.06em] text-black sm:text-lg md:mt-3 md:text-xl md:tracking-[0.1em] lg:text-2xl lg:whitespace-nowrap">
+              Seguros – Consultoría energética
             </p>
           </div>
           <p className="mt-8 text-[11px] font-medium uppercase tracking-[0.28em] text-neutral-500 md:text-xs">
@@ -120,7 +119,7 @@ export default function SobreNosotrosPage() {
         </div>
 
         <a
-          href="#financiacion"
+          href="#servicios"
           className="absolute bottom-8 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-[10px] uppercase tracking-[0.28em] text-neutral-400 transition-colors hover:text-neutral-700"
         >
           Sigue bajando
@@ -130,12 +129,8 @@ export default function SobreNosotrosPage() {
         </a>
       </section>
 
-      <div id="financiacion">
-        <FinancialPartnerSection />
-      </div>
-
       {/* Nuestros servicios */}
-      <section className="bg-white px-6 py-24 md:px-10 md:py-28">
+      <section id="servicios" className="bg-white px-6 py-24 md:px-10 md:py-28">
         <div className="mx-auto max-w-5xl">
           <h2 className="mb-14 text-center text-sm font-medium uppercase tracking-[0.28em] text-neutral-800 md:mb-16">
             Nuestros servicios
